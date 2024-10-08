@@ -3,6 +3,8 @@ package com.turing.alan.cpifp.ui
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
+import coil.load
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.turing.alan.cpifp.R
@@ -14,6 +16,7 @@ class ChampionAdapter(private val champions: List<Champion>) : RecyclerView.Adap
         val name: TextView = itemView.findViewById(R.id.name)
         val lore: TextView = itemView.findViewById(R.id.lore)
         val title: TextView = itemView.findViewById(R.id.title)
+        val image: ImageView = itemView.findViewById(R.id.imageView)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ChampionViewHolder {
@@ -26,6 +29,7 @@ class ChampionAdapter(private val champions: List<Champion>) : RecyclerView.Adap
         holder.lore.text = champion.lore
         holder.title.text = champion.title
         holder.name.text = champion.name
+        holder.image.load(champion.imageUrl)
 
     }
 

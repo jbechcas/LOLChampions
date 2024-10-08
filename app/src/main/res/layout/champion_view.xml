@@ -5,11 +5,17 @@
     android:layout_height="wrap_content"
     xmlns:tools="http://schemas.android.com/tools">
 
-
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/name"
+        android:layout_below="@+id/imageView"
         android:textColor="@color/black"
         android:textSize="20sp"
         tools:text="Name"/>
@@ -32,7 +38,7 @@
         android:layout_below="@+id/title"
         android:textColor="@color/black"
         android:textSize="15sp"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="50dp"
         tools:text="lore"/>
 
 
